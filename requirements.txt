@@ -9,7 +9,7 @@ scikit-learn
 tensorboard
 memory_profiler
 streamlit
-langchain
+langchain==0.3.27
 langchain-community
 pypdf
 pymupdf
@@ -19,5 +19,6 @@ langchain_huggingface
 faiss-cpu
 langchain_ollama
 langchain_groq
+
 
 
