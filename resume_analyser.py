@@ -17,7 +17,8 @@ load_dotenv()
 
 
 groq_api_key=st.sidebar.text_input("Enter Your Groq API key",type='password')
-llm = ChatGroq(groq_api_key=groq_api_key,model_name="openai/gpt-oss-20b")
+if groq_api_key:
+    llm = ChatGroq(groq_api_key=groq_api_key,model_name="openai/gpt-oss-20b")
 
 prompt = ChatPromptTemplate.from_template(
     """
@@ -75,5 +76,6 @@ if user_prompt:
         for i,doc in enumerate(response['context']):
             st.write(doc.page_content)
             st.write('------------------------')
+
 
 
